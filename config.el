@@ -126,8 +126,8 @@
 (setq! slack-buffer-emojify t)
 
 ;; Secrets
-(when (file-exists-p! "secrets.el" doom-private-dir)
-  (load! "secrets.el" doom-private-dir))
+(when (file-exists-p! "secrets.el" doom-user-dir)
+  (load! "secrets.el" doom-user-dir))
 
 (require 'org-table)
 (defun md-table-align ()
