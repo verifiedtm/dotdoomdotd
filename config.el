@@ -107,7 +107,8 @@
       '(not emacs-lisp-mode
 	    haskell-mode
 	    sql-mode
-            yaml-mode))
+            yaml-mode
+            sh-mode))
 
 ;; Ivy
 (setq! ivy-case-fold-search t
