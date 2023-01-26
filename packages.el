@@ -1,7 +1,6 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; $DOOMDIR/packages.el
 
-
 (package! rg)
 (package! dfraw-mode
   :recipe (:host github :repo "pthariensflame/dfraw-mode"))
