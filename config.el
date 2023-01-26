@@ -117,27 +117,27 @@
 (add-to-list 'completion-ignored-extensions ".stack-work")
 
 ;; Smudge
-(after! smudge
-  (setq! smudge-oauth2-client-secret "")
-  (setq! smudge-oauth2-client-id "")
-  (define-key smudge-mode-map (kbd "C-c .") 'smudge-command-map)
-  (setq! smudge-transport 'connect))
+;; (after! smudge
+;;   (setq! smudge-oauth2-client-secret "")
+;;   (setq! smudge-oauth2-client-id "")
+;;   (define-key smudge-mode-map (kbd "C-c .") 'smudge-command-map)
+;;   (setq! smudge-transport 'connect))
 
 ;; Slack
-(setq! slack-prefer-current-team t)
-(setq! slack-buffer-emojify t)
+;; (setq! slack-prefer-current-team t)
+;; (setq! slack-buffer-emojify t)
 
 ;; Secrets
 (when (file-exists-p! "secrets.el" doom-user-dir)
   (load! "secrets.el" doom-user-dir))
 
-(require 'org-table)
-(defun md-table-align ()
-  (interactive)
-  (org-table-align)
-  (save-excursion
-    (goto-char (point-min))
-    (while (search-forward "-+-" nil t) (replace-match "-|-"))))
+;; (require 'org-table)
+;; (defun md-table-align ()
+;;   (interactive)
+;;   (org-table-align)
+;;   (save-excursion
+;;     (goto-char (point-min))
+;;     (while (search-forward "-+-" nil t) (replace-match "-|-"))))
 
 
 (after! projectile
@@ -148,8 +148,6 @@
 (set-eshell-alias! "shake" "stack exec shake --")
 
 (add-hook! rjsx-mode 'prettier-js-mode)
-
-;; (setq! doom-font (font-spec :name "terminus" :size 24))
 
 (put 'haskell-hoogle-command 'safe-local-variable #'stringp)
 (put 'haskell-hoogle-server-command 'safe-local-variable (lambda (_) t))
